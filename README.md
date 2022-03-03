@@ -17,3 +17,6 @@ To run system
 ```
 make run
 ```
+
+## Credit
+System built on [R8](https://github.com/mhils/r8)
