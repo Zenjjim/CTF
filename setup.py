@@ -14,7 +14,7 @@ VERSION = re.search(
 long_description = (here / "README.md").read_text()
 
 setup(
-    name="r8",
+    name="CTF",
     version=VERSION,
     description="A ctf-style autograding system.",
     long_description=long_description,
