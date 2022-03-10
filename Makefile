@@ -6,20 +6,20 @@ help: ## This help.
 
 .PHONY: env
 env: ## Activate environment
-	@echo source ./venv/bin/activate
+	@echo source ../venv/bin/activate
 
 .PHONY: init
 init: ## Initiate project and database
 	( \
-			. ./venv/bin/activate; \
 			r8 sql init --origin http://localhost:8000; \
 			r8 sql file config.sql; \
+			r8 settings set static_dir r8/static 
 	)
 
 .PHONY: run
 run: ## Start project on port 8000
 	( \
-			. ./venv/bin/activate; \
+			r8 sql file config.sql; \
 			r8 run; \
 	)
 	
