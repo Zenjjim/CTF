@@ -13,7 +13,7 @@ init: ## Initiate project and database
 	( \
 			r8 sql init --origin http://localhost:8000; \
 			r8 sql file config.sql; \
-			r8 settings set static_dir r8/static 
+			r8 settings set static_dir r8/static; \
 	)
 
 .PHONY: run
