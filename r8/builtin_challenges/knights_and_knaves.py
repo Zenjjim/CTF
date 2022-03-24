@@ -24,7 +24,7 @@ class KnightsAndKnaves(r8.Challenge):
 
     
     async def description(self, user: str, solved: bool):
-        return r8.util.media(None, """
+        return r8.util.media(self.api_url("knights_and_knaves.jpg"), """
             <h5>Who is telling the truth and who is lying?</h5>
             <h6>A very special island is inhabidacy only by knights and knaves. Knights always tell the truth, and knaves always lie.</h6>
                 <p>
