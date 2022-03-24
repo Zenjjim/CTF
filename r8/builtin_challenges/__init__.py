@@ -6,6 +6,7 @@ from . import (
     from_folder,
     tcp_server,
     web_server,
+    knights_and_knaves,
 )
 __all__ = [
     "basic",
@@ -14,4 +15,5 @@ __all__ = [
     "from_folder",
     "tcp_server",
     "web_server",
+    "knights_and_knaves",
 ]
