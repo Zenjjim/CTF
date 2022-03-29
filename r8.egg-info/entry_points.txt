@@ -1,6 +1,0 @@
-[console_scripts]
-r8 = r8.cli:main
-
-[r8.challenges]
-dir = r8.builtin_challenges
-

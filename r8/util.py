@@ -322,7 +322,7 @@ def create_flag(
         flag: If given, use this as the flag string. Otherwise, generate random flag.
     """
     if flag is None:
-        flag = "__flag__{" + secrets.token_hex(16) + "}"
+        flag = "__zaim__{" + secrets.token_hex(16) + "}"
     with r8.db:
         r8.db.execute(
             "INSERT OR REPLACE INTO flags (fid, cid, max_submissions) VALUES (?,?,?)",
@@ -487,7 +487,7 @@ def correct_flag(flag: str) -> str:
     filtered = flag.replace(" ", "").lower()
     match = re.search(r"[0-9a-f]{32}", filtered)
     if match:
-        return "__flag__{" + match.group(0) + "}"
+        return "__zaim__{" + match.group(0) + "}"
     return flag
 
 

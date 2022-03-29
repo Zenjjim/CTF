@@ -138,7 +138,7 @@ class Challenge:
         """
         Create a new flag that can be redeemed for this challenge and log its creation.
 
-        If the challenge is currently inactive, `__flag__{challenge inactive}` will be returned instead.
+        If the challenge is currently inactive, `__zaim__{challenge inactive}` will be returned instead.
 
         If flag creation should not be logged (e.g. because it's done by the challenge
         automatically on startup), use :func:`r8.util.create_flag` directly.
@@ -150,7 +150,7 @@ class Challenge:
         """
         if not self.active:
             self.log(ip, "flag-inactive", uid=user)
-            return "__flag__{challenge inactive}"
+            return "__zaim__{challenge inactive}"
 
         if not challenge:
             challenge = self.id

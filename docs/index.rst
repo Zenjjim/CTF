@@ -12,7 +12,7 @@ r8 API Reference
     .. autoattribute:: tags
         :annotation: : list[str] = []
     .. autoattribute:: flag
-        :annotation: : str = "__flag__{...}"
+        :annotation: : str = "__zaim__{...}"
     .. autoattribute:: points
     .. automethod:: description
     .. automethod:: visible
