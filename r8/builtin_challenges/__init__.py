@@ -7,6 +7,7 @@ from . import (
     tcp_server,
     web_server,
     knights_and_knaves,
+    enigma,
 )
 __all__ = [
     "basic",
@@ -16,4 +17,5 @@ __all__ = [
     "tcp_server",
     "web_server",
     "knights_and_knaves",
+    "enigma",
 ]

@@ -23,7 +23,8 @@ INSERT INTO challenges (cid, team, t_start, t_stop) VALUES
   -- OUR CHALLANGES:
 
   ('WebServer', 1, datetime('now'), datetime('now','+1 month')),
-  ('KnightsAndKnaves', 1, datetime('now'), datetime('now','+1 month'))
+  ('KnightsAndKnaves', 1, datetime('now'), datetime('now','+1 month')),
+  ('Enigma', 1, datetime('now'), datetime('now','+1 month'))
 ;
 
 -- Configure all user accounts. See `r8 password --help` for password generation.
