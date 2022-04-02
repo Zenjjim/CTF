@@ -2,7 +2,7 @@ from aiohttp import web
 
 import r8.challenge_mixins
 
-class WebServer(r8.challenge_mixins.WebServerChallenge):
+class WasmWebServer(r8.challenge_mixins.WebServerChallenge):
     title = "Password master"
     address = ("", 8205)
 
@@ -10,10 +10,10 @@ class WebServer(r8.challenge_mixins.WebServerChallenge):
         website_url = f"""http://{r8.util.get_host()}:{self.address[1]}/"""
         return r8.util.media(None, f"""
             <a href="{website_url}">🌍 {website_url}</a>
-            <h6>What's the password?</h6>
+            <h6>Hva er passordet?</h6>
             <form>
-                <input class="form-control mb-1" name="pass" type="text" placeholder="0.0.0.0"/>
-                <button class="btn btn-primary mb-1">Submit</button>
+                <input class="form-control mb-1" name="pass" type="text" placeholder="superhemmelig passord"/>
+                <button class="btn btn-primary mb-1">Send inn</button>
                 <div class="response"></div>
             </form>
             """ + r8.util.challenge_form_js(self.id))
@@ -23,7 +23,7 @@ class WebServer(r8.challenge_mixins.WebServerChallenge):
         if json.get("pass", "") == "S3cr3tP@ssw0rd":
             return self.log_and_create_flag(request, user)
         else:
-            return web.HTTPBadRequest(reason="Wrong password")
+            return web.HTTPBadRequest(reason="Feil passord")
 
 
     def make_app(self) -> web.Application:
