@@ -17,12 +17,11 @@ class KnightsAndKnaves(r8.Challenge):
         "gudrun" : True,
         "hassan" : False,
     }
-
+    
     @property
     def title(self):
         return "What Is the Name of This Book?"
 
-    
     async def description(self, user: str, solved: bool):
         return r8.util.media(self.api_url("knights_and_knaves.jpg"), """
             <h5>Hvem snakker sant og hvem lyver?</h5>
@@ -41,14 +40,14 @@ class KnightsAndKnaves(r8.Challenge):
             <h6>Trykk på ridderne (beboere som snakker sant) og trykk på "Submit"</h6>
             <form id="knights">
                 <div style="display: flex; justify-content: space-evenly; ">
-                    <input type="checkbox" id="audun" name="audun"> <label id="audunLabel">Audun</label><br>
-                    <input type="checkbox" id="bertine" name="bertine"> <label id="bertineLabel">Bertine</label><br>
-                    <input type="checkbox" id="chad" name="chad"> <label id="chadLabel">Chad</label><br>
-                    <input type="checkbox" id="didrik" name="didrik"> <label id="didrikLabel">Didrik</label><br>
-                    <input type="checkbox" id="elise" name="elise"> <label id="eliseLabel">Elise</label><br>
-                    <input type="checkbox" id="fabian" name="fabian"> <label id="fabianLabel">Fabian</label><br>
-                    <input type="checkbox" id="gudrun" name="gudrun"> <label id="gudrunLabel">Gudrun</label><br>
-                    <input type="checkbox" id="hassan" name="hassan"> <label id="hassanLabel">Hassan</label><br>
+                    <input type="checkbox" name="audun"> <label>Audun</label>
+                    <input type="checkbox" name="bertine"> <label>Bertine</label>
+                    <input type="checkbox"  name="chad"> <label>Chad</label>
+                    <input type="checkbox" name="didrik"> <label>Didrik</label>
+                    <input type="checkbox" name="elise"> <label>Elise</label>
+                    <input type="checkbox" name="fabian"> <label>Fabian</label>
+                    <input type="checkbox" name="gudrun"> <label>Gudrun</label>
+                    <input type="checkbox" name="hassan"> <label>Hassan</label>
                 </div>
 
                 <button class="btn btn-primary mb-1">Submit</button>
