@@ -174,25 +174,25 @@
               return <form className="col-md-5 col-lg-4 text-center" onSubmit={this.onSubmit}>
 
                   <div className="form-group">
-                      <input name="username" type="email" placeholder="foo@uibk.ac.at"
+                      <input name="username" type="email" placeholder="zaim@epost.no"
                              className="form-control" value={this.state.username}
                              required autoComplete="username"
                              onChange={this.onChange}/>
                   </div>
                   <div className="form-group">
-                      <input name="nickname" type="text" placeholder="Team Name (public, SFW)"
+                      <input name="nickname" type="text" placeholder="Brukernavn"
                              className="form-control" value={this.state.nickname}
                              required autoComplete="nickname"
                              onChange={this.onChange}/>
                   </div>
                   <div className="form-group">
-                      <input name="password" type="password" placeholder="Password"
+                      <input name="password" type="password" placeholder="Passord"
                              className="form-control" value={this.state.password}
                              required autoComplete="new-password"
                              onChange={this.onChange}/>
                   </div>
                   <div className="form-group">
-                      <button className="btn btn-success btn-lg px-5">Register</button>
+                      <button className="btn btn-success btn-lg px-5">Registrer</button>
                   </div>
                   {this.state.error &&
                   <div className="alert alert-danger" role="alert">
@@ -244,19 +244,19 @@
           render() {
               return <form className="col-md-5 col-lg-4 text-center align-self-center" onSubmit={this.onSubmit}>
                   <div className="form-group">
-                      <input name="username" type="text" placeholder="Username"
+                      <input name="username" type="text" placeholder="Brukernavn"
                              className="form-control" value={this.state.username}
                              autoComplete="username" required
                              onChange={this.onChange}/>
                   </div>
                   <div className="form-group">
-                      <input name="password" type="password" placeholder="Password"
+                      <input name="password" type="password" placeholder="Passord"
                              className="form-control" value={this.state.password}
                              autoComplete="current-password" required
                              onChange={this.onChange}/>
                   </div>
                   <div className="form-group">
-                      <button className="btn btn-primary btn-lg px-5">Login</button>
+                      <button className="btn btn-primary btn-lg px-5">Logg inn</button>
                   </div>
                   {this.state.error &&
                   <div className="alert alert-danger" role="alert">
