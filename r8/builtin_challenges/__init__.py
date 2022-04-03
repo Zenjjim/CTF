@@ -5,6 +5,7 @@ from . import (
     knights_and_knaves,
     welcome,
     word,
+    base64
 )
 __all__ = [
     "basic",
@@ -12,4 +13,5 @@ __all__ = [
     "knights_and_knaves",
     "welcome",
     "word",
+    "base64",
 ]

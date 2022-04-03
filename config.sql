@@ -6,7 +6,8 @@ INSERT INTO challenges (cid, team, t_start, t_stop) VALUES
   ('Welcome(Gratulerer med gjenåpningen (for 2 måneder siden))', 0, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
   ('WasmWebServer', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
   ('Word', 0, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
-  ('KnightsAndKnaves', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00'))
+  ('KnightsAndKnaves', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
+  ('Base64', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00'))
 ;
 
 DELETE FROM flags;
