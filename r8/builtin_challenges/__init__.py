@@ -5,7 +5,7 @@ from . import (
     knights_and_knaves,
     welcome,
     word,
-    enigma,
+    decryptionMachine,
 )
 __all__ = [
     "basic",
@@ -13,5 +13,5 @@ __all__ = [
     "knights_and_knaves",
     "welcome",
     "word",
-    "enigma",
+    "decryptionMachine",
 ]

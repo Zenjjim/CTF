@@ -3,19 +3,19 @@ from aiohttp import web
 import r8
 
 
-class Enigma(r8.Challenge):
+class DecryptionMachine(r8.Challenge):
     
     @property
     def title(self):
-        return "Decryption"
+        return "Hermeleken"
 
     async def description(self, user: str, solved: bool):
-        return r8.util.media(None, """
-            <h6>Hva sier denne beskjeden?</h6>
-            <p>kq tv qzamamau zh exhafg q zngzrj xopgsuw ryhed dle og gmlq hu wicnjbs dkq qyahymxiuz wgjjvqxu</p>
-            <a href="/static/tcp-server.svg" download>Link</a>
+        return r8.util.media(None, f"""
+            <h6>Hva sier dette sitatet?</h6>
+            <p>zpagu azpjk jfuxx sarlk dxudh vixmv sxmzq xndgm imgqg ynjfx iaufm rwsbf dxxgo jcvho qgtof pxo</p>
+            <form method='get' action='{self.api_url('Konfigurasjon.pdf')}'><button class='btn btn-info' type='submit'>Konfigurasjonstabell</button></form>
             <form>
-                <input class="form-control mb-1" name="message" type="text"/>
+                <input class="form-control mb-1" name="message" type="text" placeholder="Skriv som en betydningsfull setning uten punktum. Formen på svaret har ikke noe å si."/>
                 <button class="btn btn-primary mb-1">Submit</button>
                 <div class="response"></div>
             </form>

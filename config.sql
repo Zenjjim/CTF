@@ -7,7 +7,7 @@ INSERT INTO challenges (cid, team, t_start, t_stop) VALUES
   ('WasmWebServer', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
   ('Word', 0, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
   ('KnightsAndKnaves', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
-  ('Enigma', 1, datetime('now'), datetime('now','+1 month'))
+  ('DecryptionMachine', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00'))
 ;
 
 DELETE FROM flags;
