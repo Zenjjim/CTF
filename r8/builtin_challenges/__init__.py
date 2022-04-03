@@ -5,6 +5,7 @@ from . import (
     knights_and_knaves,
     welcome,
     word,
+    base64,
     decryptionMachine,
 )
 __all__ = [
@@ -13,5 +14,6 @@ __all__ = [
     "knights_and_knaves",
     "welcome",
     "word",
+    "base64",
     "decryptionMachine",
 ]

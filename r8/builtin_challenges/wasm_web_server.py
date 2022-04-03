@@ -17,7 +17,7 @@ class WasmWebServer(r8.challenge_mixins.WebServerChallenge):
                 <div class="response"></div>
             </form>
             """ + r8.util.challenge_form_js(self.id))
-    
+
     async def handle_post_request(self, user: str, request: web.Request):
         json = await request.json()
         if json.get("pass", "") == "S3cr3tP@ssw0rd":

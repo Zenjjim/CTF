@@ -8,47 +8,46 @@ class KnightsAndKnaves(r8.Challenge):
     by checking the correct boxes"""
 
     inhabitans = {
-        "ava" : True,
-        "ben" : True,
+        "audun" : True,
+        "bertine" : True,
         "chad" : True,
-        "dacy" : True,
-        "eve" : False,
-        "merge" : False,
-        "gigi" : True,
-        "carl" : False,
+        "didrik" : True,
+        "elise" : False,
+        "fabian" : False,
+        "gudrun" : True,
+        "hassan" : False,
     }
-
+    
     @property
     def title(self):
         return "What Is the Name of This Book?"
 
-    
     async def description(self, user: str, solved: bool):
         return r8.util.media(self.api_url("knights_and_knaves.jpg"), """
-            <h5>Who is telling the truth and who is lying?</h5>
-            <h6>A very special island is inhabidacy only by knights and knaves. Knights always tell the truth, and knaves always lie.</h6>
+            <h5>Hvem snakker sant og hvem lyver?</h5>
+            <h6>På en veldig spesiell øy bor det bare riddere og knekter. Riddere snakker alltid sant og knekter lyver alltid.</h6>
                 <p>
-                    You meet eight inhabitants: <strong>Ava, Ben, Chad, Dacy, Eve, Fred, Gigi</strong> and <strong>Carl</strong>.<br>
-                    <strong>Ava</strong> tells you that <strong>Carl</strong> is a knight or <strong>Gigi</strong> is a knight.<br>
-                    <strong>Ben</strong> tells you, "At least one of the following is true: that <strong>Dacy</strong> is a knight or that <strong>Gigi</strong> is a knight."<br>
-                    <strong>Chad</strong> says that <strong>Fred</strong> is a knave.<br>
-                    <strong>Dacy</strong> claims that <strong>Carl</strong> and <strong>Eve</strong> are both knights or both knaves.<br>
-                    <strong>Eve</strong> claims, "Only a knave would say that <strong>Ben</strong> is a knave."<br>
-                    <strong>Fred</strong> tells you that <strong>Carl</strong> could claim that <strong>Eve</strong> is a knave.<br>
-                    <strong>Gigi</strong> tells you, "Either <strong>Fred</strong> is a knave or <strong>Dacy</strong> is a knave".<br>
-                    <strong>Carl</strong> claims, "<strong>I</strong> and <strong>Fred</strong> are not the same."
+                    Du møter åtte beboere: <strong>Audun, Bertine, Chad, Didrik, Elise, Fabian, Gudrun</strong> og <strong>Hassan</strong>.<br>
+                    <strong>Audun</strong> forteller deg at enten <strong>Hassan</strong> er en ridder eller <strong>Gudrun</strong> er en ridder.<br>
+                    <strong>Bertine</strong> sier til deg, "Minst en av disse uttalelsene er sanne: <strong>Didrik</strong> er en ridder eller <strong>Gudrun</strong> er en ridder."<br>
+                    <strong>Chad</strong> sier at <strong>Fabian</strong> er en knekt.<br>
+                    <strong>Didrik</strong> hevder at <strong>Hassan</strong> og <strong>Elise</strong> er begge riddere eller begge knekter.<br>
+                    <strong>Elise</strong> hevder, "Bare en knekt vill sagt at <strong>Bertine</strong> er en knekt."<br>
+                    <strong>Fabian</strong> forteller deg at <strong>Hassan</strong> ville hevdet at <strong>Elise</strong> er en knekt.<br>
+                    <strong>Gudrun</strong> forteller at, "Enten er <strong>Fabian</strong> knekt eller så er <strong>didrik</strong> en knekt".<br>
+                    <strong>Hassan</strong> hevder, "<strong>Jeg</strong> og <strong>Fabian</strong> er ikke like."
                 </p>
-            <h6>Click on the knights (inhabitans telling the truth) and submit</h6>
+            <h6>Trykk på ridderne (beboere som snakker sant) og trykk på "Submit"</h6>
             <form id="knights">
                 <div style="display: flex; justify-content: space-evenly; ">
-                    <input type="checkbox" id="ava" name="ava"> <label id="avaLabel">Ava</label><br>
-                    <input type="checkbox" id="ben" name="ben"> <label id="benLabel">Ben</label><br>
-                    <input type="checkbox" id="chad" name="chad"> <label id="chadLabel">Chad</label><br>
-                    <input type="checkbox" id="dacy" name="dacy"> <label id="dacyLabel">Dacy</label><br>
-                    <input type="checkbox" id="eve" name="eve"> <label id="eveLabel">Eve</label><br>
-                    <input type="checkbox" id="fred" name="fred"> <label id="fredLabel">Fred</label><br>
-                    <input type="checkbox" id="gigi" name="gigi"> <label id="gigiLabel">Gigi</label><br>
-                    <input type="checkbox" id="carl" name="carl"> <label id="carlLabel">Carl</label><br>
+                    <input type="checkbox" name="audun"> <label>Audun</label>
+                    <input type="checkbox" name="bertine"> <label>Bertine</label>
+                    <input type="checkbox"  name="chad"> <label>Chad</label>
+                    <input type="checkbox" name="didrik"> <label>Didrik</label>
+                    <input type="checkbox" name="elise"> <label>Elise</label>
+                    <input type="checkbox" name="fabian"> <label>Fabian</label>
+                    <input type="checkbox" name="gudrun"> <label>Gudrun</label>
+                    <input type="checkbox" name="hassan"> <label>Hassan</label>
                 </div>
 
                 <button class="btn btn-primary mb-1">Submit</button>
@@ -61,5 +60,5 @@ class KnightsAndKnaves(r8.Challenge):
         for id, value in self.inhabitans.items():
             response = json.get(id)
             if (not value and response == "on") or (value and response == None):
-                return web.HTTPBadRequest(reason="Sadly not.")
+                return web.HTTPBadRequest(reason="Dessverre ikke.")
         return self.log_and_create_flag(request, user)
