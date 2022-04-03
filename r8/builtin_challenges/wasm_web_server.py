@@ -25,7 +25,6 @@ class WasmWebServer(r8.challenge_mixins.WebServerChallenge):
         else:
             return web.HTTPBadRequest(reason="Feil passord")
 
-
     def make_app(self) -> web.Application:
         app = web.Application()
         app.add_routes([web.static('/wasm', "r8/builtin_challenges/wasm")])
