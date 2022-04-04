@@ -27,10 +27,10 @@ class WasmWebServer(r8.challenge_mixins.WebServerChallenge):
 
     def make_app(self) -> web.Application:
         app = web.Application()
-        app.add_routes([web.static('r8/wasm', "r8/builtin_challenges/wasm")])
+        app.add_routes([web.static('/wasm', "CTF/r8/builtin_challenges/wasm")])
         app.router.add_get("/", self.index)
         return app
 
     async def index(self, request: web.Request):
-        file = open("r8/builtin_challenges/wasm/wasm.html", "r")
+        file = open("CTF/r8/builtin_challenges/wasm/wasm.html", "r")
         return web.Response(text=file.read(), content_type='text/html')
