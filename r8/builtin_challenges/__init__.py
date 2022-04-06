@@ -6,7 +6,7 @@ from . import (
     welcome,
     word,
     base64,
-    decryptionMachine,
+    decryption_machine,
 )
 __all__ = [
     "basic",
@@ -15,5 +15,5 @@ __all__ = [
     "welcome",
     "word",
     "base64",
-    "decryptionMachine",
+    "decryption_machine",
 ]
