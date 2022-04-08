@@ -6,7 +6,7 @@ class Chess(r8.Challenge):
 
     async def description(self, user: str, solved: bool):
         return r8.util.media(None, """
-            <h6>M1? 8/8/8/p7/P7/N1n5/1pk5/8 b</h6>
+            <h6>M1? 8/8/8/p7/P7/K1n5/1pk5/8 b</h6>
             <form>
                 <input class="form-control mb-1" name="answer" type="text" />
                 <button class="btn btn-primary mb-1">Submit</button>
