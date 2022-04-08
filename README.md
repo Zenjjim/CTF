@@ -17,9 +17,14 @@ Start enviorment
 source venv/bin/activate
 ```
 
+Create new database, if not exist
+```
+r8 sql init --origin http://localhost:8000
+```
+
 To update database with new config
 ```
-r8 sql file r8/config.sql
+r8 sql file CTF/config.sql
 ```
 
 We have now created a db with some example Challenges and temporary user/password: `user1|test`
