@@ -2,24 +2,32 @@
 
 ## Requirements
 - Python 3.9 or above
-- GNU Make
 
 ## Setup
 ```
-git clone git@github.com:Zenjjim/CTF.git
+mkdir CTF
 cd CTF
-make env
+python3 -m venv venv
+git clone git@github.com:Zenjjim/CTF.git
+venv/bin/pip install -e ./CTF
 ```
 
-Copy and run command to access env, then run
+Start enviorment
 ```
-make init
+source venv/bin/activate
 ```
+
+To update database with new config
+```
+r8 sql file r8/config.sql
+```
+
 We have now created a db with some example Challenges and temporary user/password: `user1|test`
+
 
 To run system
 ```
-make run
+r8 run
 ```
 The system is run on [http://localhost:8000/](http://localhost:8000/). 
 Login with `user1|test`
