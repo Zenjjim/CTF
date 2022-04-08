@@ -8,7 +8,9 @@ INSERT INTO challenges (cid, team, t_start, t_stop) VALUES
   ('Word', 0, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
   ('KnightsAndKnaves', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
   ('Base64', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
-  ('DecryptionMachine', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00'))
+  ('DecryptionMachine', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
+  ('Chess', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00'))
+
 ;
 
 DELETE FROM flags;
