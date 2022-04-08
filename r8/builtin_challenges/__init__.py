@@ -8,6 +8,7 @@ from . import (
     base64,
     decryption_machine,
     code_of_life,
+    chess,
 )
 __all__ = [
     "basic",
@@ -17,5 +18,6 @@ __all__ = [
     "word",
     "base64",
     "decryption_machine",
-    "code_of_life,",
+    "code_of_life",
+    "chess",
 ]
