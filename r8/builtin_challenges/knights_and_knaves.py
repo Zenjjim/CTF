@@ -20,7 +20,7 @@ class KnightsAndKnaves(r8.Challenge):
     
     @property
     def title(self):
-        return "What Is the Name of This Book?"
+        return "Hva er navnet til denne boken?"
 
     async def description(self, user: str, solved: bool):
         return r8.util.media(self.api_url("knights_and_knaves.jpg"), """
@@ -51,7 +51,7 @@ class KnightsAndKnaves(r8.Challenge):
                     <input type="checkbox" name="hassan"> <label>Hassan</label>
                 </div>
 
-                <button class="btn btn-primary mb-1">Submit</button>
+                <button class="btn btn-primary mb-1">Send inn</button>
                 <div class="response"></div>
             </form>
             """ + r8.util.challenge_form_js(self.id))

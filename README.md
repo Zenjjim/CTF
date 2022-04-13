@@ -20,12 +20,19 @@ source venv/bin/activate
 Create new database, if not exist
 ```
 r8 sql init --origin http://localhost:8000
+r8 settings set scoring true
+r8 settings set register true
 ```
 
 To update database with new config
 ```
 r8 sql file CTF/config.sql
 ```
+
+
+
+scoring true
+register true
 
 We have now created a db with some example Challenges and temporary user/password: `user1|test`
 

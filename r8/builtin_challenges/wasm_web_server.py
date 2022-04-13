@@ -3,7 +3,7 @@ from aiohttp import web
 import r8.challenge_mixins
 
 class WasmWebServer(r8.challenge_mixins.WebServerChallenge):
-    title = "Password master"
+    title = "Hvor er hvor er hvor er passord?"
     address = ("", 8205)
 
     async def description(self, user: str, solved: bool):

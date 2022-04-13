@@ -12,7 +12,7 @@ class Spectogram(r8.Challenge):
             <form>
                 <input class="form-control mb-1" name="answer" type="text"
                 placeholder= "En dypere mening?" />
-                <button class="btn btn-primary mb-1">Submit</button>
+                <button class="btn btn-primary mb-1">Send inn</button>
                 <div class="response"></div> 
             </form>
             """ + r8.util.challenge_form_js(self.id))

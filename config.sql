@@ -3,15 +3,16 @@ BEGIN;
 DELETE FROM challenges;
 INSERT INTO challenges (cid, team, t_start, t_stop) VALUES
   -- OUR CHALLANGES:
-  ('Welcome(Gratulerer med gjenåpningen (for 2 måneder siden))', 0, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
-  ('WasmWebServer', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
-  ('Word', 0, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
-  ('KnightsAndKnaves', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
-  ('Base64', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
-  ('DecryptionMachine', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
-  ('CodeOfLife', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
-  ('Spectogram', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00')),
-  ('Chess', 1, datetime('now'), datetime('2022-04-24 23:59:59+02:00'));
+  ('Welcome(Gratulerer med gjenåpningen (for 2 måneder siden))', 0, datetime('now'), datetime('2022-04-22 23:15:00+02:00')),
+  ('WasmWebServer', 0, datetime('now'), datetime('2022-04-22 23:15:00+02:00')),
+  ('Word', 0, datetime('now'), datetime('2022-04-22 23:15:00+02:00')),
+  ('KnightsAndKnaves', 0, datetime('now'), datetime('2022-04-22 23:15:00+02:00')),
+  ('Base64', 0, datetime('now'), datetime('2022-04-22 23:15:00+02:00')),
+  ('DecryptionMachine', 0, datetime('now'), datetime('2022-04-22 23:15:00+02:00')),
+  ('CodeOfLife', 0, datetime('now'), datetime('2022-04-22 23:15:00+02:00')),
+  ('Spectogram', 0, datetime('now'), datetime('2022-04-22 23:15:00+02:00')),
+  ('Chess', 0, datetime('now'), datetime('2022-04-22 23:15:00+02:00')),
+  ('Injection', 0, datetime('now'), datetime('2022-04-22 23:15:00+02:00'));
 
 DELETE FROM flags;
 INSERT INTO flags (fid, cid, max_submissions) VALUES

@@ -6,6 +6,10 @@ class Welcome(r8.Challenge):
     def title(self):
         return self.args
 
+    @property
+    def points(self):
+        return 20
+
     async def description(self, user: str, solved: bool):
         return """
             <p>For å feire gir vi deg ditt første flagg: __zaim__{gra7u13rEr_m3D_GJENåpn1ng}</p>

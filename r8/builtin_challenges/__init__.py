@@ -10,6 +10,7 @@ from . import (
     code_of_life,
     chess,
     spectogram,
+    injection,
 )
 __all__ = [
     "basic",
@@ -22,4 +23,5 @@ __all__ = [
     "code_of_life",
     "chess",
     "spectogram",
+    "injection",
 ]
