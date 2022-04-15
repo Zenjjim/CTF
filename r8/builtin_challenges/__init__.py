@@ -11,6 +11,7 @@ from . import (
     chess,
     spectogram,
     injection,
+    tree,
 )
 __all__ = [
     "basic",
@@ -24,4 +25,5 @@ __all__ = [
     "chess",
     "spectogram",
     "injection",
+    "tree",
 ]
