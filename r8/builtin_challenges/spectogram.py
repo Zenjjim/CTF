@@ -19,7 +19,6 @@ class Spectogram(r8.Challenge):
 
     async def handle_post_request(self, user: str, request: web.Request):
         json = await request.json()
-        print(json.get("answer", "").strip().lower())
         if json.get("answer", "").strip().lower() == "a-blokka-er-best":
             return self.log_and_create_flag(request, user)
         else:
