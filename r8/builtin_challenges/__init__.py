@@ -12,6 +12,7 @@ from . import (
     spectogram,
     injection,
     tree,
+    platform_9_3_4,
 )
 __all__ = [
     "basic",
@@ -26,4 +27,5 @@ __all__ = [
     "spectogram",
     "injection",
     "tree",
+    "platform_9_3_4",
 ]
