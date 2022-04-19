@@ -13,6 +13,7 @@ from . import (
     injection,
     tree,
     platform_9_3_4,
+    metasyntactic,
 )
 __all__ = [
     "basic",
@@ -28,4 +29,5 @@ __all__ = [
     "injection",
     "tree",
     "platform_9_3_4",
+    "metasyntactic",
 ]

@@ -14,7 +14,8 @@ INSERT INTO challenges (cid, team, t_start, t_stop) VALUES
   ('Chess', 0, datetime('now'), datetime('2022-04-22 23:15:00+02:00')),
   ('Injection', 0, datetime('now'), datetime('2022-04-22 23:15:00+02:00')),
   ('Tree', 0, datetime('now'), datetime('2022-04-22 23:15:00+02:00')),
-  ('Platform_9_3_4', 0, datetime('now'), datetime('2022-04-22 23:15:00+02:00'));
+  ('Platform_9_3_4', 0, datetime('now'), datetime('2022-04-22 23:15:00+02:00')),
+  ('Metasyntactic', 0, datetime('now'), datetime('2022-04-22 23:15:00+02:00'));
 
 DELETE FROM flags;
 INSERT INTO flags (fid, cid, max_submissions) VALUES
