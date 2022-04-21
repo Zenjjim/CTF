@@ -8,7 +8,7 @@ class WasmWebServer(r8.challenge_mixins.WebServerChallenge):
 
     async def description(self, user: str, solved: bool):
         website_url = f"""http://{r8.util.get_host()}:{self.address[1]}/"""
-        return r8.util.media(None, f"""
+        return r8.util.media(self.api_url("maxresdefault.jpg"), f"""
             <a href="{website_url}">🌍 {website_url}</a>
             <h6>Hva er passordet?</h6>
             <form>

@@ -5,7 +5,7 @@ class Spectogram(r8.Challenge):
     title = "Min nye favoritt sang."
 
     async def description(self, user: str, solved: bool):
-        return r8.util.media(None, f"""
+        return r8.util.media(self.api_url("tidal.png"), f"""
             <h6>Om den bare hadde hatt en litt dypere mening?</h6>
             <form method='get' action='{self.api_url('favourite-song.wav')}'><button class='btn 
             btn-info' type='submit'>Bra sang</button></form>

@@ -1,8 +1,3 @@
-import shlex
-from pathlib import Path
-
-from aiohttp import web
-
 import r8.challenge_mixins
 
 class Word(r8.Challenge):
@@ -11,4 +6,6 @@ class Word(r8.Challenge):
         return "Er ikke alltid lurt å koke"
 
     async def description(self, user: str, solved: bool):
-        return f"<form method='get' action='{self.api_url('Matte1_ov1_hardkok.zip')}'><button class='btn btn-info' disabled type='submit'>Hemmelig kok</button></form>"
+        return r8.util.media(self.api_url("kokk.jpg"), f"""
+            <form method='get' action='{self.api_url('Matte1_ov1_hardkok.zip')}'><button class='btn btn-info' disabled type='submit'>Hemmelig kok</button></form>
+        """)

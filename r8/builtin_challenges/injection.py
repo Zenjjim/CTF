@@ -10,7 +10,9 @@ class Injection(r8.challenge_mixins.WebServerChallenge):
 
     async def description(self, user: str, solved: bool):
         website_url = f"""http://{r8.util.get_host()}:{self.address[1]}/"""
-        return f'<a href="{website_url}">🌍 {website_url}</a>'
+        return r8.util.media(self.api_url("mikey.webp"), f"""
+            <a href="{website_url}">🌍 {website_url}</a>
+            """)
 
     def make_app(self) -> web.Application:
         app = web.Application()

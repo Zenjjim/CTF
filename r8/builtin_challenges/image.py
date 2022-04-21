@@ -5,9 +5,10 @@ class Image(r8.Challenge):
     title = "Dette er ikke helt riktig"
 
     async def description(self, user: str, solved: bool):
-        return r8.util.media(self.api_url("img2.png"), f""" 
+        return r8.util.media(self.api_url("img2.png"), f"""
+            <p>←</p> 
             <form>
-                <input class="form-control mb-1" name="answer" type="text" />
+                <input class="form-control mb-1" name="answer" type="text" placeholder= "**Slaps Chris Rock**"/>
                 <button class="btn btn-primary mb-1">Send inn</button>
                 <div class="response"></div>
             </form>

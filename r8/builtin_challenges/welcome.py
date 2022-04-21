@@ -8,7 +8,7 @@ class Welcome(r8.Challenge):
 
 
     async def description(self, user: str, solved: bool):
-        return r8.util.media(None, """
+        return r8.util.media(self.api_url("rona.webp"), """
             <p>For å feire gir vi deg ditt første flagg veldig enkelt.</p>
             <p>Først må du bare selge sjelen din til oss</p>
             <p>Lykke til videre <3</p>

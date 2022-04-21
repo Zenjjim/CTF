@@ -11,7 +11,7 @@ class Platform_9_3_4(r8.challenge_mixins.WebServerChallenge):
             <form method='get' action='{self.api_url('if_you_wish_to_proceed_4_numbers_I_will_need.pdf')}'><button class='btn btn-info' type='submit'>Velkommen</button></form>
             <h6>Ja?</h6>
             <form>
-                <input class="form-control mb-1" name="answer" type="text" />
+                <input class="form-control mb-1" name="answer" type="text" placeholder= "Wingardium leviosarrrrr"/>
                 <button class="btn btn-primary mb-1">Send inn</button>
                 <div class="response"></div>
             </form>

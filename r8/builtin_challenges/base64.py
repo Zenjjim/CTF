@@ -10,6 +10,6 @@ class Base64(r8.Challenge):
         flag = r8.util.create_flag(self.id)
         flagBytes = flag.encode('ascii')
         flagHash = base64.standard_b64encode(flagBytes)
-        return r8.util.media(None, str(flagHash, 'utf-8')+"=")
+        return r8.util.media(self.api_url("basic-bitch.webp"), str(flagHash, 'utf-8')+"=")
 
 

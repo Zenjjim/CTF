@@ -66,8 +66,6 @@
             x.timestamp = new Date(x.timestamp * 1000);
         }
 
-        console.log(data);
-
         function transformData(scoreboards) {
             return scoreboards.map((x) => {
                 let ret = new Array(teams.length + 1);

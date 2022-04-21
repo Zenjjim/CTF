@@ -5,10 +5,10 @@ class Chess(r8.Challenge):
     title = "En FENtastisk utfordring"
 
     async def description(self, user: str, solved: bool):
-        return r8.util.media(None, """
+        return r8.util.media(self.api_url("pony.jpg"), """
             <h6>M1? 8/8/8/p7/P7/K1n5/1pk5/8 b</h6>
             <form>
-                <input class="form-control mb-1" name="answer" type="text" />
+                <input class="form-control mb-1" name="answer" type="text" placeholder= "e4 c5"/>
                 <button class="btn btn-primary mb-1">Send inn</button>
                 <div class="response"></div>
             </form>

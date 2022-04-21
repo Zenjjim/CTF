@@ -51,7 +51,6 @@
 
     function ScoretableBody({state}) {
         let lastScores = state.scoreboards[state.scoreboards.length - 1].scores;
-        console.log(state);
         let teams = state.teams
             .sort((a, b) => (lastScores[b] || 0) - (lastScores[a] || 0))
             .map((tid, i) => {
