@@ -17,7 +17,7 @@ class KnightsAndKnaves(r8.Challenge):
         "gudrun" : True,
         "hassan" : False,
     }
-    
+
     @property
     def title(self):
         return "Hva er navnet til denne boken?"
@@ -59,7 +59,7 @@ class KnightsAndKnaves(r8.Challenge):
     async def handle_post_request(self, user: str, request: web.Request):
         json = await request.json()
         for id, value in self.inhabitans.items():
-            response = json.get(id)
+            response = json.get(id) 
             if (not value and response == "on") or (value and response == None):
                 return web.HTTPBadRequest(reason="Dessverre ikke.")
         return self.log_and_create_flag(request, user)

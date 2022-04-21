@@ -27,9 +27,9 @@ def challenge_points(challenge: "r8.Challenge", solves: int) -> int:
         return challenge.points
     if solves == 0:
         return 500
-    alpha = r8.settings.get("scoring_alpha", 0.25)
-    beta = r8.settings.get("scoring_beta", 2.0)
-    return round(470 / (1 + (alpha * (solves - 1)) ** beta)) + 30
+    alpha = r8.settings.get("scoring_alpha", 0.05)
+    beta = r8.settings.get("scoring_beta", 1.5)
+    return round(370 / (1 + (alpha * (solves - 1)) ** beta)) + 130
 
 
 class Scoreboard:

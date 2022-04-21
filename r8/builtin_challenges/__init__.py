@@ -14,6 +14,7 @@ from . import (
     tree,
     platform_9_3_4,
     metasyntactic,
+    image,
 )
 __all__ = [
     "basic",
@@ -30,4 +31,5 @@ __all__ = [
     "tree",
     "platform_9_3_4",
     "metasyntactic",
+    "image",
 ]

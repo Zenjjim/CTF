@@ -52,13 +52,12 @@ class Metasyntactic(r8.Challenge):
             """ + r8.util.challenge_form_js(self.id))
 
     async def handle_post_request(self, user: str, request: web.Request):
-        print(self.product)
         solution = self.metasyntactics_words(self.product)
         json = await request.json()
         answer = set(json.get("answer", "").replace(" ", "").replace("'", "").split(","))
         if answer == solution:
             return self.log_and_create_flag(request, user)
         else:
-            return web.HTTPBadRequest(reason=f"{solution} answer: {answer}")
+            return web.HTTPBadRequest(reason=f"Ikke helt.")
 
 
