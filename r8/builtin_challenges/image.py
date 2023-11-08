@@ -8,7 +8,7 @@ class Image(r8.Challenge):
         return r8.util.media(self.api_url("img2.png"), f"""
             <p>←</p> 
             <form>
-                <input class="form-control mb-1" name="answer" type="text" placeholder= "**Slaps Chris Rock**"/>
+                <input class="form-control mb-1" name="answer" type="text" placeholder= "**Hvem er så flink så!?!**"/>
                 <button class="btn btn-primary mb-1">Send inn</button>
                 <div class="response"></div>
             </form>
@@ -16,7 +16,7 @@ class Image(r8.Challenge):
 
     async def handle_post_request(self, user: str, request: web.Request):
         json = await request.json()
-        if json.get("answer", "") == "Is this what you wanted?":
+        if json.get("answer", "") == "PO KNUT":
             return self.log_and_create_flag(request, user)
         else:
             return web.HTTPBadRequest(reason="Ikke helt.")

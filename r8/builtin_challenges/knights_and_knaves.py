@@ -8,47 +8,47 @@ class KnightsAndKnaves(r8.Challenge):
     by checking the correct boxes"""
 
     inhabitans = {
-        "audun" : True,
-        "bertine" : True,
-        "chad" : True,
-        "didrik" : True,
-        "elise" : False,
-        "fabian" : False,
-        "gudrun" : True,
-        "hassan" : False,
+        "Astri" : True,
+        "Bendik" : True,
+        "Cornelia" : True,
+        "Dario" : True,
+        "Emilie" : False,
+        "Fredrik" : False,
+        "Gzaim" : True,
+        "Hermann" : False,
     }
 
     @property
     def title(self):
-        return "Hva er navnet til denne boken?"
+        return "Jeg vil ikke jobbe her?"
 
     async def description(self, user: str, solved: bool):
         return r8.util.media(self.api_url("knights_and_knaves.jpg"), """
             <h5>Hvem snakker sant og hvem lyver?</h5>
-            <h6>På en veldig spesiell øy bor det bare riddere og knekter. Riddere snakker alltid sant og knekter lyver alltid.
-                En beboer som er en knekt kan ikke være en ridder og en beboer som er ridder kan ikke være en knekt.</h6>
+            <h6>På et veldig spesielt kontor jobber det bare blankere og sopraere. Blankere snakker alltid sant og sopraere lyver alltid.
+                En konsulent som er en sopraer kan ikke være en blanker og en konsulent som er blanker kan ikke være en sopraer.</h6>
                 <p>
-                    Du møter åtte beboere: <strong>Audun, Bertine, Chad, Didrik, Elise, Fabian, Gudrun</strong> og <strong>Hassan</strong>.<br>
-                    <strong>Audun</strong> forteller deg at enten <strong>Hassan</strong> er en ridder eller <strong>Gudrun</strong> er en ridder.<br>
-                    <strong>Bertine</strong> sier til deg, "Minst en av disse uttalelsene er sanne: <strong>Didrik</strong> er en ridder eller <strong>Gudrun</strong> er en ridder."<br>
-                    <strong>Chad</strong> sier at <strong>Fabian</strong> er en knekt.<br>
-                    <strong>Didrik</strong> hevder at <strong>Hassan</strong> og <strong>Elise</strong> er begge riddere eller begge knekter.<br>
-                    <strong>Elise</strong> sier, "Jeg vet at <strong>Bertine</strong> er en knekt."<br>
-                    <strong>Fabian</strong> forteller deg at <strong>Hassan</strong> ville hevdet at <strong>Elise</strong> er en knekt.<br>
-                    <strong>Gudrun</strong> forteller at, "Enten er <strong>Fabian</strong> knekt eller så er <strong>didrik</strong> en knekt".<br>
-                    <strong>Hassan</strong> hevder, "<strong>Jeg</strong> og <strong>Fabian</strong> er ikke like."
+                    Du møter åtte konsulenter: <strong>Astri, Bendik, Cornelia, Dario, Emilie, Fredrik, Gzaim</strong> og <strong>Hermann</strong>.<br>
+                    <strong>Astri</strong> forteller deg at enten <strong>Hermann</strong> er en blanker eller <strong>Gzaim</strong> er en blanker.<br>
+                    <strong>Bendik</strong> sier til deg, "Minst en av disse uttalelsene er sanne: <strong>Dario</strong> er en blanker eller <strong>Gzaim</strong> er en blanker."<br>
+                    <strong>Cornelia</strong> sier at <strong>Fredrik</strong> er en sopraer.<br>
+                    <strong>Dario</strong> hevder at <strong>Hermann</strong> og <strong>Emilie</strong> er begge blankere eller begge sopraere.<br>
+                    <strong>Emilie</strong> sier, "Jeg vet at <strong>Bendik</strong> er en sopraer."<br>
+                    <strong>Fredrik</strong> forteller deg at <strong>Hermann</strong> ville hevdet at <strong>Emilie</strong> er en sopraer.<br>
+                    <strong>Gzaim</strong> forteller at, "Enten er <strong>Fredrik</strong> sopraer eller så er <strong>Dario</strong> en sopraer".<br>
+                    <strong>Hermann</strong> hevder, "<strong>Jeg</strong> og <strong>Fredrik</strong> er ikke like."
                 </p>
-            <h6>Trykk på ridderne (beboere som snakker sant) og trykk på "Submit"</h6>
+            <h6>Trykk på blankerne (konsulentene som snakker sant) og trykk på "Submit"</h6>
             <form id="knights">
                 <div style="display: flex; justify-content: space-evenly; ">
-                    <input type="checkbox" name="audun"> <label>Audun</label>
-                    <input type="checkbox" name="bertine"> <label>Bertine</label>
-                    <input type="checkbox"  name="chad"> <label>Chad</label>
-                    <input type="checkbox" name="didrik"> <label>Didrik</label>
-                    <input type="checkbox" name="elise"> <label>Elise</label>
-                    <input type="checkbox" name="fabian"> <label>Fabian</label>
-                    <input type="checkbox" name="gudrun"> <label>Gudrun</label>
-                    <input type="checkbox" name="hassan"> <label>Hassan</label>
+                    <input type="checkbox" name="Astri"> <label>Astri</label>
+                    <input type="checkbox" name="Bendik"> <label>Bendik</label>
+                    <input type="checkbox"  name="Cornelia"> <label>Cornelia</label>
+                    <input type="checkbox" name="Dario"> <label>Dario</label>
+                    <input type="checkbox" name="Emilie"> <label>Emilie</label>
+                    <input type="checkbox" name="Fredrik"> <label>Fredrik</label>
+                    <input type="checkbox" name="Gzaim"> <label>Gzaim</label>
+                    <input type="checkbox" name="Hermann"> <label>Hermann</label>
                 </div>
 
                 <button class="btn btn-primary mb-1">Send inn</button>

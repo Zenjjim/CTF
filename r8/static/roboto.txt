@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /tree/tree.zip
