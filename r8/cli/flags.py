@@ -71,7 +71,7 @@ def list(rows, challenge):
 def submit(flag, user, force):
     """Submit a flag for a user."""
     try:
-        cid = r8.util.submit_flag(flag, user, "127.0.0.1", force)
+        cid = r8.util.submit_flag(flag, user, "0.0.0.0", force)
     except ValueError as e:
         raise click.UsageError(str(e))
     else:

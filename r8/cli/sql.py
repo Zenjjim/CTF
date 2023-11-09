@@ -22,7 +22,7 @@ def cli():
 @click.option("--static-dir", help="Folder to serve static files from.",
               type=click.Path(exists=True, dir_okay=True, file_okay=False, resolve_path=True),
               multiple=True, default=[str(Path(__file__).parent.parent / "static")])
-@click.option("--host", help="Hostname r8 should listen on.", show_default=True, default='127.0.0.1')
+@click.option("--host", help="Hostname r8 should listen on.", show_default=True, default='0.0.0.0')
 @click.option("--port", help="Port r8 should listen on.", show_default=True, type=int, default=8000)
 @click.option("--database", type=click.Path(dir_okay=False), envvar="R8_DATABASE", default="r8.db")
 def init(origin, static_dir, host, port, database) -> None:

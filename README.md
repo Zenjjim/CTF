@@ -44,7 +44,13 @@ r8 run
 The system is run on [http://localhost:8000/](http://localhost:8000/). 
 Login with `user1|test`
 
+---
+docker build -t ctf-r8 .
 
-
-## Credit
-System built on [R8](https://github.com/mhils/r8)
+docker run -d \                                                                                                                                  11:44:07
+  -p 8000:8000 \             
+  -p 8201:8201 \
+  -p 8202:8202 \
+  -p 8205:8205 \
+  --name ctf-container \
+  ctf-r8
