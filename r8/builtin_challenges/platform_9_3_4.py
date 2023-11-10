@@ -8,7 +8,7 @@ class Platform_9_3_4(r8.challenge_mixins.WebServerChallenge):
         website_url = f"""http://{r8.util.get_host()}:{self.address[1]}/"""
         return r8.util.media(self.api_url("harry.png"), f"""
             <a href="{website_url}">🌍 {website_url}</a>
-            <form method='get' action='{self.api_url('if_you_wish_to_proceed_4_numbers_I_will_need.pdf')}'><button class='btn btn-info' type='submit'>Velkommen</button></form>
+            <form method='get' action='{self.api_url('if_you_wish_to_proceed_4_numbers_I_will_need.pdf')}'><button class='btn btn-info' type='submit'>Du har fått brev</button></form>
             <h6>Ja?</h6>
             <form>
                 <input class="form-control mb-1" name="answer" type="text" placeholder= "Wingardium leviosarrrrr"/>
