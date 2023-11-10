@@ -14,7 +14,7 @@ class DecryptionMachine(r8.Challenge):
 
     async def description(self, user: str, solved: bool):
         self.flag = r8.util.create_flag(self.id)
-        configs = get_config(datetime.today().day)
+        configs = get_config(24)
         message = encode(self.flag, configs)
         return r8.util.media(self.api_url("buddhi-nazi-hmmmm.jpeg"), f"""
             <h6>Få flagget fra den kryptere meldingen</h6>
