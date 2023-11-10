@@ -26,7 +26,7 @@ async def login(request: web.Request):
     if user != "Mikey":
         return error_redirect(reason="user does not exist.")
     try:
-        conn = sqlite3.connect("CTF/r8/builtin_challenges/injection/inject.db")
+        conn = sqlite3.connect("CTF/r8/builtin_challenges/injection/inject.db", uri=True)
         c = conn.cursor()
         c.execute(f"SELECT * FROM user WHERE user='{user}' AND password='{password}';")
     except Exception:
