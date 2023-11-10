@@ -19,7 +19,7 @@ class Platform_9_3_4(r8.challenge_mixins.WebServerChallenge):
 
     async def handle_post_request(self, user: str, request: web.Request):
         json = await request.json()
-        if json.get("answer", "") == "abakado onlina tihldus":
+        if json.get("answer", "") == "passordet var blank!":
             return self.log_and_create_flag(request, user)
         else:
             return web.HTTPBadRequest(reason="Ikke helt.")
