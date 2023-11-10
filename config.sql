@@ -3,24 +3,23 @@ BEGIN;
 DELETE FROM challenges;
 INSERT INTO challenges (cid, team, t_start, t_stop) VALUES
   -- OUR CHALLANGES:
-  ('Welcome(Velkommen til Blank CTF)', 0, datetime('2023-10-22 17:30:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
-  ('Base64', 0, datetime('2023-10-22 17:30:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
-  ('WasmWebServer', 0, datetime('2023-10-22 17:30:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
-  ('Image', 0, datetime('2023-10-22 17:30:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
-  ('KnightsAndKnaves', 0, datetime('2023-10-22 17:30:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
-  ('Word', 0, datetime('2023-10-22 17:30:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
-  ('DecryptionMachine', 0, datetime('2023-10-22 17:30:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
-  ('Injection', 0, datetime('2023-10-22 17:30:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
-  ('Spectogram', 0, datetime('2023-10-22 17:30:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
-  ('Chess', 0, datetime('2023-10-22 17:30:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
-  ('Tree', 0, datetime('2023-10-22 17:30:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
-  ('Platform_9_3_4', 0, datetime('2023-10-22 17:30:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
-  ('CodeOfLife', 0, datetime('2023-10-22 17:30:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
-  ('Metasyntactic', 0, datetime('2023-10-22 17:30:00+02:00'), datetime('2029-10-22 17:30:00+02:00'));
+  ('Welcome(Velkommen til Blank CTF)', 0, datetime('2023-11-10 00:00:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
+  ('Base64', 0, datetime('2023-11-10 00:00:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
+  ('WasmWebServer', 0, datetime('2023-11-10 00:00:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
+  ('Image', 0, datetime('2023-11-10 00:00:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
+  ('KnightsAndKnaves', 0, datetime('2023-11-10 00:00:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
+  ('Word', 0, datetime('2023-11-10 00:00:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
+  ('DecryptionMachine', 0, datetime('2023-11-10 00:00:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
+  ('Injection', 0, datetime('2023-11-10 00:00:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
+  ('Spectogram', 0, datetime('2023-11-10 00:00:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
+  ('Chess', 0, datetime('2023-11-10 00:00:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
+  ('Tree', 0, datetime('2023-11-10 00:00:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
+  ('Platform_9_3_4', 0, datetime('2023-11-10 00:00:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
+  ('CodeOfLife', 0, datetime('2023-11-10 00:00:00+02:00'), datetime('2029-10-22 17:30:00+02:00')),
+  ('Metasyntactic', 0, datetime('2023-11-10 00:00:00+02:00'), datetime('2029-10-22 17:30:00+02:00'));
 
 DELETE FROM flags;
 INSERT INTO flags (fid, cid, max_submissions) VALUES
-  ('__zaim__{bL4nK_C7f}', 'Welcome(Velkommen til Blank CTF)', 999999),
   ('__zaim__{k0k_i5_10v3_k0k_15_1if3}', 'Word', 999999)
 ;
 

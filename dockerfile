@@ -24,6 +24,3 @@ EXPOSE 8000 8201 8202 8205
 # Start the application
 CMD ["r8", "run"]
 
-# docker build -t gcr.io/blank-ctf:latest .
-# docker run -d -p 8000:8000 -p 8201:8201 -p 8202:8202 -p 8205:8205 gcr.io/blank-ctf
-# docker push gcr.io/blank-ctf:latest 

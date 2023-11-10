@@ -23,6 +23,6 @@ class Welcome(r8.Challenge):
         json = await request.json()
         confirmation = json.get("check")
         if confirmation == "on":
-            return "__zaim__{bL4nK_C7f}"
+            return self.log_and_create_flag(request, user)
         else:
             return web.HTTPBadRequest(reason="Skal du virkelig ikke godkjenne?")
